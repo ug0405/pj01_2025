@@ -1,15 +1,18 @@
 commands:
-  run-server:
+  server:
     description: "Start the server"
-    command: "./src/server"
+    command: "./src/exe/server"
     
-  run-client:
+  client:
     description: "Start the client"
-    command: "./src/client"
+    command: "./src/exe/client"
 
   build:
     description: "Build the project"
-    command: "g++ -o ./src/server ./src/server.cpp"
+    command:
+      - "mkdir -p build && cd build && cmake .. && make"
+
+
   clean:
     description: "Clean the build"
     command: "rm -f ./src/server"
