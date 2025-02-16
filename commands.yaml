@@ -1,0 +1,15 @@
+commands:
+  run-server:
+    description: "Start the server"
+    command: "./src/server"
+    
+  run-client:
+    description: "Start the client"
+    command: "./src/client"
+
+  build:
+    description: "Build the project"
+    command: "g++ -o ./src/server ./src/server.cpp"
+  clean:
+    description: "Clean the build"
+    command: "rm -f ./src/server"
