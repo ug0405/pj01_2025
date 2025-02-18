@@ -4,13 +4,29 @@
 TEST(CalcTest, AddFunc)
 {
     Calc c;
+    ASSERT_EQ(c.Add(2, 3), 5);
+    ASSERT_EQ(c.Add(-1, 1), 0);
+}
 
-    int actSum = c.Add(1, 2);
-    int exSum = 3;
+TEST(CalcTest, SubFunc)
+{
+    Calc c;
+    ASSERT_EQ(c.Sub(2, 3), -1);
+    ASSERT_EQ(c.Sub(10, 5), 5);
+}
 
-    ASSERT_EQ(actSum, exSum);
-    ASSERT_EQ(c.Add(2, 3), 5);  // 2 + 3 が 5 であることを確認
-    ASSERT_EQ(c.Add(-1, 1), 0); // -1 + 1 が 0 であることを確認
+TEST(CalcTest, MultiplyFunc)
+{
+    Calc c;
+    ASSERT_EQ(c.Multiply(2, 3), 6);
+    ASSERT_EQ(c.Multiply(10, 0), 0);
+}
+
+TEST(CalcTest, DivideFunc)
+{
+    Calc c;
+    ASSERT_EQ(c.Divide(10, 2), 5);
+    ASSERT_EQ(c.Divide(0, 5), 0);
 }
 
 // Google Test を初期化してテストを実行するための main 関数を追加
