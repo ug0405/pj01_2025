@@ -7,6 +7,11 @@ int Calc::Add(int a, int b)
     return a + b;
 };
 
+int Calc::Add2()
+{
+    return x_ + y_;
+}
+
 int Calc::Sub(int a, int b)
 {
     return a - b;

@@ -8,6 +8,14 @@ TEST(CalcTest, AddFunc)
     ASSERT_EQ(c.Add(-1, 1), 0);
 }
 
+TEST(CalcTest, Add2Func)
+{
+    Calc c;
+    c.x_ = 5;
+    c.y_ = 6;
+    ASSERT_EQ(c.Add2(), 11);
+}
+
 TEST(CalcTest, SubFunc)
 {
     Calc c;
