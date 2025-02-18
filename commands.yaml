@@ -12,7 +12,10 @@ commands:
     command:
       - "mkdir -p build && cd build && cmake .. && make"
 
-
   clean:
     description: "Clean the build"
     command: "rm -f ./src/server"
+
+  unit-test:
+    description: "Unit Test"
+    command: "./test/exe/*"
